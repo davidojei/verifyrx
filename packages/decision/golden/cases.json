@@ -1,0 +1,34 @@
+{
+  "config": { "flagAtDevices": 3, "flagAtAreas": 2, "flagAtScans": 6, "flagAtReports": 3 },
+  "base": {
+    "found": true,
+    "batchStatus": "ok",
+    "expiryDate": "2028-06-30",
+    "today": "2026-10-14",
+    "scanCount": 1,
+    "distinctDevices": 1,
+    "distinctAreas": 1,
+    "confirmedFakeReports": 0,
+    "openUserReports": 0
+  },
+  "cases": [
+    { "name": "clean code is VERIFIED", "override": {}, "expected": { "state": "VERIFIED", "reasons": [] } },
+    { "name": "unknown code is CANT_CONFIRM", "override": { "found": false }, "expected": { "state": "CANT_CONFIRM", "reasons": ["CODE_NOT_FOUND"] } },
+    { "name": "unknown code ignores every other field", "override": { "found": false, "scanCount": 99, "batchStatus": "recalled", "confirmedFakeReports": 5 }, "expected": { "state": "CANT_CONFIRM", "reasons": ["CODE_NOT_FOUND"] } },
+    { "name": "recalled batch", "override": { "batchStatus": "recalled" }, "expected": { "state": "SUSPICIOUS", "reasons": ["RECALLED"] } },
+    { "name": "expired yesterday", "override": { "expiryDate": "2026-10-13" }, "expected": { "state": "SUSPICIOUS", "reasons": ["EXPIRED"] } },
+    { "name": "expires today is not expired", "override": { "expiryDate": "2026-10-14" }, "expected": { "state": "VERIFIED", "reasons": [] } },
+    { "name": "confirmed fake report", "override": { "confirmedFakeReports": 1 }, "expected": { "state": "SUSPICIOUS", "reasons": ["REPORTED_FAKE"] } },
+    { "name": "2 open user reports is below threshold", "override": { "openUserReports": 2 }, "expected": { "state": "VERIFIED", "reasons": [] } },
+    { "name": "3 open user reports hits threshold", "override": { "openUserReports": 3 }, "expected": { "state": "SUSPICIOUS", "reasons": ["REPORTED_BY_USERS"] } },
+    { "name": "2 devices is below threshold", "override": { "distinctDevices": 2 }, "expected": { "state": "VERIFIED", "reasons": [] } },
+    { "name": "3 devices hits threshold", "override": { "distinctDevices": 3 }, "expected": { "state": "SUSPICIOUS", "reasons": ["MANY_DEVICES"] } },
+    { "name": "1 area is fine", "override": { "distinctAreas": 1 }, "expected": { "state": "VERIFIED", "reasons": [] } },
+    { "name": "2 areas hits threshold", "override": { "distinctAreas": 2 }, "expected": { "state": "SUSPICIOUS", "reasons": ["MANY_LOCATIONS"] } },
+    { "name": "5 scans is below threshold", "override": { "scanCount": 5 }, "expected": { "state": "VERIFIED", "reasons": [] } },
+    { "name": "6 scans hits threshold", "override": { "scanCount": 6 }, "expected": { "state": "SUSPICIOUS", "reasons": ["HIGH_SCAN_COUNT"] } },
+    { "name": "all reasons listed in fixed order", "override": { "batchStatus": "recalled", "expiryDate": "2020-01-01", "confirmedFakeReports": 2, "openUserReports": 4, "distinctDevices": 5, "distinctAreas": 3, "scanCount": 9 }, "expected": { "state": "SUSPICIOUS", "reasons": ["RECALLED", "EXPIRED", "REPORTED_FAKE", "REPORTED_BY_USERS", "MANY_DEVICES", "MANY_LOCATIONS", "HIGH_SCAN_COUNT"] } },
+    { "name": "mirrors seed VRXDEMO00008 (clone)", "override": { "scanCount": 5, "distinctDevices": 5, "distinctAreas": 4 }, "expected": { "state": "SUSPICIOUS", "reasons": ["MANY_DEVICES", "MANY_LOCATIONS"] } },
+    { "name": "mirrors seed VRXDEMO00003 (heavily scanned)", "override": { "scanCount": 8 }, "expected": { "state": "SUSPICIOUS", "reasons": ["HIGH_SCAN_COUNT"] } }
+  ]
+}
