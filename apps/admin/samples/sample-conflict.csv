@@ -1,0 +1,5 @@
+nafdac_reg_no,product_name,manufacturer,active_ingredient,strength,batch_no,mfg_date,expiry_date,code_value
+DEMO-A4-0001,Wrong Product Name,DEMO Pharma Ltd,Paracetamol,500 mg,PCM-2501,2025-07-01,2028-06-30,VRXNEW10001
+DEMO-A4-0002,Demo Amoxicillin Capsules,Sample Labs Nigeria Ltd,Amoxicillin,500 mg,AMX-2602,2026-02-01,2029-01-31,VRXNEW10002
+DEMO-A4-0004,Demo Ibuprofen Tablets,DEMO Pharma Ltd,Ibuprofen,400 mg,IBU-2503,2025-09-01,2027-12-31,VRXDEMO00016
+DEMO-A4-0004,Demo Ibuprofen Tablets,DEMO Pharma Ltd,Ibuprofen,400 mg,IBU-2503,2025-09-01,2027-12-31,VRXDEMO00001

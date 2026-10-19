@@ -1,0 +1,7 @@
+nafdac_reg_no,product_name,manufacturer,active_ingredient,strength,batch_no,mfg_date,expiry_date,code_value
+DEMO-A4-0201,Demo Test Tablets,DEMO Pharma Ltd,Testium,10 mg,TST-1,2026-01-01,2028-01-01,BAD00001
+DEMO-A4-0201,Demo Test Tablets,,Testium,10 mg,TST-1,2026-01-01,2028-01-01,BAD00002
+DEMO-A4-0201,Demo Test Tablets,DEMO Pharma Ltd,Testium,10 mg,TST-1,2026-01-01,30/06/2028,BAD00003
+DEMO-A4-0201,Demo Test Tablets,DEMO Pharma Ltd,Testium,10 mg,TST-1,2026-01-01,2028-01-01,BAD00001
+DEMO-A4-0201,Demo Test Tablets,DEMO Pharma Ltd,Testium,10 mg,TST-1,2026-01-01,2029-01-01,BAD00005
+DEMO-A4-0201,Demo Test Tablets,DEMO Pharma Ltd,Testium,10 mg,TST-2,2029-01-01,2028-01-01,BAD00006

@@ -1,5 +1,5 @@
 {
   "name": "verifyrx",
   "private": true,
-  "workspaces": ["apps/*", "packages/*"]
+  "workspaces": ["apps/mobile", "packages/*"]
 }

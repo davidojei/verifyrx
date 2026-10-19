@@ -47,3 +47,14 @@ export const RATE_LIMITED_NOTE =
   'You have checked a lot of codes in a short time. Please wait a minute and try again.';
 export const GENERIC_ERROR_NOTE = 'Something went wrong. Please try again.';
 export const UNREADABLE_CODE_NOTE = 'That code could not be read. Please try again.';
+export const REPORT_SENT_NOTE =
+  'Thank you. Your report was sent to our team for review. A report on its own does not confirm that a medicine is fake.';
+export const REPORT_QUEUED_NOTE =
+  'Your report is saved on this phone. It will be sent automatically once you are back online.';
+export const REPORT_RATE_LIMITED_NOTE =
+  'You have sent several reports recently. Yours is saved and will be sent a little later.';
+export const REPORT_QUEUE_FULL_NOTE =
+  'Too many reports are waiting to send. Please connect to the internet and try again.';
+export const REPORT_NEEDS_DETAIL_NOTE = 'Add a code, a product name or at least one photo.';
+export const REPORT_PRIVACY_NOTE =
+  'Photos and notes are sent to our team. Please avoid including people, faces or personal details in photos.';

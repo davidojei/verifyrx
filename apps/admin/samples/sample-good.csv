@@ -1,0 +1,7 @@
+nafdac_reg_no,product_name,manufacturer,active_ingredient,strength,batch_no,mfg_date,expiry_date,code_value
+DEMO-A4-0101,Demo Zinc Tablets,DEMO Pharma Ltd,Zinc sulfate,20 mg,ZNC-2601,2026-03-01,2028-02-28,VRXNEW00001
+DEMO-A4-0101,Demo Zinc Tablets,DEMO Pharma Ltd,Zinc sulfate,20 mg,ZNC-2601,2026-03-01,2028-02-28,VRXNEW00002
+DEMO-A4-0101,Demo Zinc Tablets,DEMO Pharma Ltd,Zinc sulfate,20 mg,ZNC-2601,2026-03-01,2028-02-28,VRXNEW00003
+DEMO-A4-0101,Demo Zinc Tablets,DEMO Pharma Ltd,Zinc sulfate,20 mg,ZNC-2602,2026-04-01,2028-03-31,VRXNEW00004
+DEMO-B1-0102,Demo Folic Acid Tablets,Example Health Products,Folic acid,5 mg,FOL-2601,2026-02-01,2028-01-31,VRXNEW00005
+DEMO-B1-0102,Demo Folic Acid Tablets,Example Health Products,Folic acid,5 mg,FOL-2601,2026-02-01,2028-01-31,VRXNEW00006
