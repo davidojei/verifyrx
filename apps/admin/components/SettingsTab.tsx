@@ -2,6 +2,7 @@
 
 import { useCallback, useEffect, useState } from 'react';
 import { supabase } from '../lib/supabase';
+import FlagsPanel from './FlagsPanel';
 
 interface Cfg {
   key: string;
@@ -20,6 +21,12 @@ const INFO: Record<string, string> = {
 };
 
 const ALLOW_ZERO = new Set(['rescan_window_hours']);
+
+Object.assign(INFO, {
+  max_analyses_per_day: 'Photo analyses one phone may run per day',
+  max_analyses_per_hour_per_ip: 'Photo analyses allowed per hour from one internet address',
+  max_global_analyses_per_day: 'Kill switch: total photo analyses allowed per day across all phones',
+});
 
 export default function SettingsTab() {
   const [rows, setRows] = useState<Cfg[] | null>(null);
@@ -91,6 +98,7 @@ export default function SettingsTab() {
           <button onClick={() => void save()}>Save changes</button>
         </p>
       </div>
+      <FlagsPanel />
     </section>
   );
 }
