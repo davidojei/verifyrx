@@ -1,3 +1,4 @@
+import type { NoteCode, SignCode } from './photo';
 import type { Reason, ResultState } from './types';
 
 export const DISCLAIMER =
@@ -58,3 +59,24 @@ export const REPORT_QUEUE_FULL_NOTE =
 export const REPORT_NEEDS_DETAIL_NOTE = 'Add a code, a product name or at least one photo.';
 export const REPORT_PRIVACY_NOTE =
   'Photos and notes are sent to our team. Please avoid including people, faces or personal details in photos.';
+export const SIGNS_HEADING = 'Signs we noticed';
+
+export const PHOTO_DISCLAIMER =
+  'Photo checks are a screening aid only. They can miss problems and can also flag packs that are fine.';
+
+export const SIGN_COPY: Record<SignCode, string> = {
+  REG_NO_MISMATCH: 'The registration number printed on the pack belongs to a different product in our records.',
+  PACK_EXPIRED: 'The expiry date printed on the pack has passed.',
+  MANDATORY_FIELD_MISSING:
+    'A detail that should be printed on the pack, such as the batch number, expiry date or registration number, could not be found.',
+  BATCH_FORMAT_MISMATCH: 'The batch number is not written in the format we expect for this manufacturer.',
+  PACK_CONTRADICTS_RECORD: 'The batch or expiry date on the pack does not match our record for the code you scanned.',
+  VISUAL_DIFFERENCE: 'Something about the printing or design looked different from our reference photos.',
+};
+
+export const NOTE_COPY: Record<NoteCode, string> = {
+  PHOTO_NO_SIGNS_NOT_PROOF:
+    'We did not notice anything unusual in the photos. A photo cannot confirm that a medicine is genuine.',
+  PHOTO_INCONCLUSIVE: 'The photos were not clear enough to check, so they did not change the result.',
+  ASK_PHARMACIST: 'Ask a pharmacist to check this medicine before you use it.',
+};
