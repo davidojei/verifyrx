@@ -10,7 +10,8 @@ interface Flag {
 }
 
 const LABELS: Record<string, string> = {
-  photo_analysis: 'Packaging photo analysis',
+  pack_check: 'Pack check by hand (typed details compared with our records)',
+  photo_analysis: 'Reading pack photos with AI (needs a paid model)',
   pill_id: 'Pill identification',
   retain_photos: 'Let users choose to keep their analysis photos',
 };
